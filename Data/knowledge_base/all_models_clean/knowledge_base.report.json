@@ -1,0 +1,174 @@
+{
+  "source": "../Data/knowledge_base/all_models/knowledge_base.jsonl",
+  "output": "../Data/knowledge_base/all_models_clean/knowledge_base.jsonl",
+  "rows": 485,
+  "kept": 431,
+  "harness_verdicts": {
+    "verified": 443,
+    "an_assert_fails": 18,
+    "no_assert_in_tests": 19,
+    "tests_do_not_call_solution": 5
+  },
+  "decisions": {
+    "kept": 431,
+    "similar_to_mbpp_plus": 8,
+    "an_assert_fails": 18,
+    "duplicate_prompt": 4,
+    "no_assert_in_tests": 19,
+    "tests_do_not_call_solution": 5
+  },
+  "per_model": {
+    "gemma3_4b": {
+      "kept": 340,
+      "similar_to_mbpp_plus": 6,
+      "an_assert_fails": 18,
+      "duplicate_prompt": 4,
+      "no_assert_in_tests": 9,
+      "tests_do_not_call_solution": 5
+    },
+    "llama-3.1-8b-instant": {
+      "no_assert_in_tests": 10,
+      "kept": 14
+    },
+    "llama-3.3-70b-versatile": {
+      "kept": 19,
+      "similar_to_mbpp_plus": 2
+    },
+    "qwen3-coder_480b": {
+      "kept": 58
+    }
+  },
+  "examples": {
+    "similar_to_mbpp_plus": [
+      {
+        "prompt": "Write a function that calculates the area of a rectangle given its length and width.",
+        "mbpp_plus": "Mbpp/458",
+        "cosine": 0.537
+      },
+      {
+        "prompt": "Given an array of integers `nums`, find the contiguous subarray with the largest sum. Return its sum.",
+        "mbpp_plus": "Mbpp/559",
+        "cosine": 0.513
+      },
+      {
+        "prompt": "Write a function that takes an integer as input and returns the number of divisors of that integer.",
+        "mbpp_plus": "Mbpp/96",
+        "cosine": 0.599
+      },
+      {
+        "prompt": "Given a string `s`, find the length of the longest palindromic subsequence of `s`.",
+        "mbpp_plus": "Mbpp/247",
+        "cosine": 0.545
+      },
+      {
+        "prompt": "Write a function that calculates the area of a rectangle given its length and width. The area of a rectangle is calculat",
+        "mbpp_plus": "Mbpp/458",
+        "cosine": 0.537
+      },
+      {
+        "prompt": "Write a function that calculates the sum of all even numbers in a given list.",
+        "mbpp_plus": "Mbpp/270",
+        "cosine": 0.544
+      },
+      {
+        "prompt": "Write a function to calculate the area of a rectangle.",
+        "mbpp_plus": "Mbpp/458",
+        "cosine": 0.773
+      },
+      {
+        "prompt": "Write a function to reverse a given string.",
+        "mbpp_plus": "Mbpp/456",
+        "cosine": 0.664
+      }
+    ],
+    "an_assert_fails": [
+      {
+        "uid": "easy_medium_hard-synllm_23-4",
+        "prompt": "Implement a thread-safe counter that can be incremented by multiple threads concurrently. The counter should be initiali"
+      },
+      {
+        "uid": "easy_medium_hard-synllm_4-1",
+        "prompt": "Implement a memoized function to calculate the nth Fibonacci number. Utilize a dictionary to store previously computed F"
+      },
+      {
+        "uid": "easy_medium_hard-synllm_13-1",
+        "prompt": "Implement a function to solve the N-Queens problem. Given an integer n, return all distinct arrangements of placing n qu"
+      },
+      {
+        "uid": "easy_medium_hard-synllm_20-1",
+        "prompt": "Given a stream of numbers, calculate the running median at each point. The running median is the median of the numbers s"
+      },
+      {
+        "uid": "diversity-synllm_25-12",
+        "prompt": "Given a list of activities, each with a start time and finish time, and a precedence graph representing dependencies bet"
+      }
+    ],
+    "duplicate_prompt": [
+      {
+        "uid": "easy_medium_hard-synllm_9-8",
+        "prompt": "Implement the Bubble Sort algorithm to sort a list of integers in ascending order."
+      },
+      {
+        "uid": "easy_medium_hard-synllm_10-9",
+        "prompt": "Implement the Selection Sort algorithm to sort a list of integers in ascending order."
+      },
+      {
+        "uid": "easy_medium_hard-synllm_11-10",
+        "prompt": "Implement the Insertion Sort algorithm to sort a list of integers in ascending order."
+      },
+      {
+        "uid": "easy_medium_hard-synllm_23-17",
+        "prompt": "Write a function `calculate_average(numbers)` that takes a list of numbers as input and returns their average. Ensure th"
+      }
+    ],
+    "no_assert_in_tests": [
+      {
+        "uid": "easy_medium_hard-synllm_2-12",
+        "prompt": "Write a function that takes an integer as input and prints its square. The input will always be a non-negative integer."
+      },
+      {
+        "uid": "easy_medium_hard-synllm_5-15",
+        "prompt": "Write a function that takes an integer `n` as input and prints all numbers from 1 to `n` using a while loop."
+      },
+      {
+        "uid": "easy_medium_hard-synllm_16-8",
+        "prompt": "Create a class called `Animal` with a constructor that takes a `name` and `species` as arguments. The class should have "
+      },
+      {
+        "uid": "easy_medium_hard-synllm_2-7",
+        "prompt": "Write a function that takes an integer as input and prints its square to the console."
+      },
+      {
+        "uid": "easy_medium_hard-synllm_14-8",
+        "prompt": "Create a class called `Animal` with a constructor that takes a name as an argument. The class should have a method calle"
+      }
+    ],
+    "tests_do_not_call_solution": [
+      {
+        "uid": "easy_medium_hard-synllm_17-4",
+        "prompt": "Create an HTML document with a heading, a paragraph, and an image. The heading should say 'My First Webpage', the paragr"
+      },
+      {
+        "uid": "diversity-synllm_28-22",
+        "prompt": "Implement a hash table with separate chaining for collision resolution. The hash table should support insertion, deletio"
+      },
+      {
+        "uid": "easy_medium_hard-synllm_21-4",
+        "prompt": "Create an HTML paragraph element with the text 'Hello, world!'."
+      },
+      {
+        "uid": "diversity-synllm_13-18",
+        "prompt": "Implement a hash table with separate chaining for collision resolution. The hash table should support insert, get, and d"
+      },
+      {
+        "uid": "easy_medium_hard-synllm_14-11",
+        "prompt": "Implement a hash table (dictionary) in Python. The hash table should allow adding key-value pairs, retrieving values by "
+      }
+    ]
+  },
+  "options": {
+    "timeout": 15.0,
+    "decontam_threshold": 0.5,
+    "drop_test_repaired": false
+  }
+}

@@ -1,0 +1,10 @@
+# Cài: pip install -r requirements.txt   (Python >= 3.10)
+python-dotenv>=1.0      # nạp file .env (không có cũng chạy, code tự đọc .env dạng KEY=VALUE)
+evalplus==0.3.1         # tải đề MBPP+ (lệnh generate) và chấm MBPP / MBPP+; trên Mac nên chấm qua Docker
+gradio>=4.0             # demo web (scripts/run_demo.py)
+
+# Tuỳ chọn cho Source_Code/tools/:
+# scikit-learn          # check_contamination.py
+# pandas pyarrow        # convert_mbpp_to_parquet.py
+# Tuỳ chọn cho RL của executor (tools/grpo_executor.py, tools/hf_generate.py; đã thử với các bản này):
+# torch>=2.6 transformers>=4.56.2 trl==1.18.0 peft==0.21.3 datasets accelerate

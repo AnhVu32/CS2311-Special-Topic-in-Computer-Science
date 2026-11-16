@@ -1,0 +1,13 @@
+{
+  "id": "nguynhanhv/cs2311-agent0-benchmark",
+  "title": "CS2311 Agent0 benchmark",
+  "code_file": "cs2311_kaggle.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": ["nguynhanhv/cs2311-special-topic-in-computer-science"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

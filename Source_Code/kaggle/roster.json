@@ -1,0 +1,39 @@
+{
+  "_notes": [
+    "Danh sách model cho tools/run_matrix.py. Sửa tự do: bật / tắt bằng \"enabled\", thêm model mới bằng một dòng.",
+    "provider: ollama = chạy trên GPU của máy (Kaggle T4) qua Ollama local; groq / ollama-cloud / openai = gọi API;",
+    "custom = API tương thích OpenAI bất kỳ (cần base_url, key đọc từ biến môi trường api_key_env).",
+    "tier dùng để gom nhóm khi so sánh (nhỏ / vừa / lớn); params_b = số tham số (tỉ) để vẽ biểu đồ.",
+    "Tên model trên Groq và Ollama Cloud thay đổi theo thời gian: notebook in ra danh sách model hiện có trước khi chạy.",
+    "Groq đã tắt llama-3.1-8b-instant và llama-3.3-70b-versatile cho gói Free / Developer từ 16/08/2026;",
+    "llama3.1-8b dưới đây là cùng trọng số Llama 3.1 8B nhưng chạy local.",
+    "gpt-oss là model suy luận: reasoning_effort=low (Groq) / think=low (Ollama) để bớt token, max_tokens 4096 để không bị cắt."
+  ],
+  "defaults": {"workers": 4},
+  "models": [
+    {"label": "qwen2.5-coder-1.5b", "provider": "ollama", "model": "qwen2.5-coder:1.5b", "tier": "nhỏ", "params_b": 1.5},
+    {"label": "gemma3-4b", "provider": "ollama", "model": "gemma3:4b", "tier": "nhỏ", "params_b": 4},
+    {"label": "qwen2.5-coder-7b", "provider": "ollama", "model": "qwen2.5-coder:7b", "tier": "nhỏ", "params_b": 7},
+    {"label": "llama3.1-8b", "provider": "ollama", "model": "llama3.1:8b", "tier": "nhỏ", "params_b": 8},
+    {"label": "ministral-3-8b", "provider": "ollama", "model": "ministral-3:8b", "tier": "nhỏ", "params_b": 8},
+    {"label": "rnj-1-8b", "provider": "ollama", "model": "rnj-1:8b", "tier": "nhỏ", "params_b": 8},
+    {"label": "gemma3-12b", "provider": "ollama", "model": "gemma3:12b", "tier": "vừa", "params_b": 12},
+
+    {"label": "gpt-oss-20b", "provider": "groq", "model": "openai/gpt-oss-20b", "tier": "vừa", "params_b": 21,
+     "workers": 2, "max_tokens": 4096, "extra_body": {"reasoning_effort": "low"}},
+    {"label": "gpt-oss-120b", "provider": "groq", "model": "openai/gpt-oss-120b", "tier": "lớn", "params_b": 117,
+     "workers": 2, "max_tokens": 4096, "extra_body": {"reasoning_effort": "low"}},
+    {"label": "qwen3.6-27b", "provider": "groq", "model": "qwen/qwen3.6-27b", "tier": "vừa", "params_b": 27,
+     "workers": 2, "max_tokens": 4096, "enabled": false},
+
+    {"label": "gpt-oss-120b-ollama-cloud", "provider": "ollama-cloud", "model": "gpt-oss:120b", "tier": "lớn", "params_b": 117,
+     "workers": 1, "max_tokens": 4096, "extra_body": {"think": "low"}, "enabled": false},
+    {"label": "qwen3.5-397b", "provider": "ollama-cloud", "model": "qwen3.5:397b", "tier": "lớn", "params_b": 397,
+     "workers": 1, "max_tokens": 4096, "enabled": false},
+    {"label": "deepseek-v4-flash", "provider": "ollama-cloud", "model": "deepseek-v4-flash", "tier": "lớn",
+     "workers": 1, "max_tokens": 4096, "enabled": false},
+
+    {"label": "vi-du-api-tuong-thich-openai", "provider": "custom", "base_url": "https://<endpoint>/v1",
+     "api_key_env": "CUSTOM_API_KEY", "model": "<ten-model>", "tier": "lớn", "enabled": false}
+  ]
+}

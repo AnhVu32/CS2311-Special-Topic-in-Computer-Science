@@ -1,0 +1,122 @@
+{
+  "config": {
+    "provider": "groq",
+    "backend": "Groq API",
+    "model": "llama-3.3-70b-versatile",
+    "base_url": "https://api.groq.com/openai/v1",
+    "data_file": "/Users/vy/Desktop/School/CS2230 - Thầy Tiệp Bịp/Do_an/Data/mbpp/mbpp.jsonl",
+    "synthetic_only": true,
+    "synthetic_count": 10,
+    "synthetic_generator": "llm",
+    "synthetic_domain": "coding",
+    "strategy": "all",
+    "items_per_strategy": 5,
+    "limit": null,
+    "repair_rounds": 2,
+    "verify_timeout": 20,
+    "prompt_key": "text",
+    "code_key": "code",
+    "test_key": "test_list",
+    "setup_key": "test_setup_code",
+    "log_file": "Source_code/Agent0/Agent0_new/logs/groq_70b_2stage.log",
+    "log_level": "INFO",
+    "log_llm_io": true,
+    "llm_io_max_chars": 20000
+  },
+  "stats": {
+    "selected": 15,
+    "accepted": 3,
+    "rejected": 12,
+    "taxonomy_top": [
+      [
+        "lists",
+        8
+      ],
+      [
+        "math",
+        6
+      ],
+      [
+        "io",
+        6
+      ],
+      [
+        "search",
+        6
+      ],
+      [
+        "bitwise",
+        4
+      ],
+      [
+        "strings",
+        3
+      ],
+      [
+        "set",
+        2
+      ],
+      [
+        "datastructures",
+        1
+      ],
+      [
+        "dp",
+        1
+      ],
+      [
+        "recursion",
+        1
+      ]
+    ],
+    "counts": {
+      "accepted": 3,
+      "stage_hard": 15,
+      "strategy_easy_medium_hard": 5,
+      "verified_pass": 3,
+      "rejected": 12,
+      "verified_fail": 12,
+      "strategy_diversity": 5,
+      "strategy_mutate": 5
+    }
+  },
+  "accepted_examples": [
+    {
+      "uid": "easy_medium_hard-synllm_4-1",
+      "source_task_id": "synllm_4",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "math",
+        "io"
+      ],
+      "difficulty": "hard",
+      "score": 0.733
+    },
+    {
+      "uid": "easy_medium_hard-synllm_1-4",
+      "source_task_id": "synllm_1",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "math",
+        "io",
+        "lists"
+      ],
+      "difficulty": "hard",
+      "score": 0.823
+    },
+    {
+      "uid": "diversity-synllm_5-8",
+      "source_task_id": "synllm_5",
+      "strategy": "diversity",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "strings"
+      ],
+      "difficulty": "hard",
+      "score": 0.805
+    }
+  ]
+}

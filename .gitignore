@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.gradio/
+# cache embedding của KB, tự sinh lại khi cần
+*.index.json
+# bản đệm tạm khi chấm với --allow_incomplete
+*_padded.jsonl
+*_padded_eval_results.json
+# môi trường ảo, checkpoint của Jupyter
+.venv/
+venv/
+.ipynb_checkpoints/

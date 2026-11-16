@@ -1,0 +1,303 @@
+{
+  "config": {
+    "provider": "ollama-cloud",
+    "backend": "Ollama Cloud",
+    "model": "gemma3:4b",
+    "base_url": "https://ollama.com",
+    "data_file": "/Users/vy/Desktop/School/CS2230 - Thầy Tiệp Bịp/Do_an/Data/mbpp/mbpp.jsonl",
+    "synthetic_only": true,
+    "synthetic_count": 30,
+    "synthetic_generator": "llm",
+    "synthetic_domain": "elementary python: absolute value, power, celsius to fahrenheit, area of circle, concatenate strings, uppercase lowercase",
+    "strategy": "easy_medium_hard",
+    "items_per_strategy": 15,
+    "limit": null,
+    "repair_rounds": 2,
+    "verify_timeout": 20,
+    "prompt_key": "text",
+    "code_key": "code",
+    "test_key": "test_list",
+    "setup_key": "test_setup_code",
+    "log_file": "Source_code/Agent0/Agent0_new/logs/kb_easy_7200.log",
+    "log_level": "INFO",
+    "log_llm_io": false,
+    "llm_io_max_chars": 20000
+  },
+  "stats": {
+    "selected": 30,
+    "accepted": 18,
+    "rejected": 12,
+    "skipped_duplicate_fail": 0,
+    "skipped_existing_kb": 0,
+    "kb_existing": 763,
+    "kb_total": 781,
+    "taxonomy_top": [
+      [
+        "io",
+        30
+      ],
+      [
+        "bitwise",
+        24
+      ],
+      [
+        "strings",
+        9
+      ],
+      [
+        "loops",
+        7
+      ],
+      [
+        "lists",
+        6
+      ],
+      [
+        "sorting",
+        1
+      ],
+      [
+        "search",
+        1
+      ]
+    ],
+    "counts": {
+      "rejected": 12,
+      "stage_medium": 15,
+      "strategy_easy_medium_hard": 30,
+      "verified_fail": 12,
+      "accepted": 18,
+      "verified_pass": 18,
+      "stage_hard": 15
+    }
+  },
+  "accepted_examples": [
+    {
+      "uid": "easy_medium_hard-synllm_6-2",
+      "source_task_id": "synllm_6",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.587
+    },
+    {
+      "uid": "easy_medium_hard-synllm_7-3",
+      "source_task_id": "synllm_7",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.587
+    },
+    {
+      "uid": "easy_medium_hard-synllm_12-4",
+      "source_task_id": "synllm_12",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "strings",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.637
+    },
+    {
+      "uid": "easy_medium_hard-synllm_1-5",
+      "source_task_id": "synllm_1",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.712
+    },
+    {
+      "uid": "easy_medium_hard-synllm_25-7",
+      "source_task_id": "synllm_25",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.762
+    },
+    {
+      "uid": "easy_medium_hard-synllm_26-9",
+      "source_task_id": "synllm_26",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.781
+    },
+    {
+      "uid": "easy_medium_hard-synllm_14-10",
+      "source_task_id": "synllm_14",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.781
+    },
+    {
+      "uid": "easy_medium_hard-synllm_4-11",
+      "source_task_id": "synllm_4",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.782
+    },
+    {
+      "uid": "easy_medium_hard-synllm_24-12",
+      "source_task_id": "synllm_24",
+      "strategy": "easy_medium_hard",
+      "stage": "medium",
+      "taxonomy": [
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "medium",
+      "score": 0.785
+    },
+    {
+      "uid": "easy_medium_hard-synllm_29-16",
+      "source_task_id": "synllm_29",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "lists",
+        "sorting",
+        "io"
+      ],
+      "difficulty": "hard",
+      "score": 0.902
+    },
+    {
+      "uid": "easy_medium_hard-synllm_23-17",
+      "source_task_id": "synllm_23",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "loops"
+      ],
+      "difficulty": "hard",
+      "score": 0.907
+    },
+    {
+      "uid": "easy_medium_hard-synllm_3-18",
+      "source_task_id": "synllm_3",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "loops"
+      ],
+      "difficulty": "hard",
+      "score": 0.912
+    },
+    {
+      "uid": "easy_medium_hard-synllm_13-21",
+      "source_task_id": "synllm_13",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "strings",
+        "bitwise",
+        "io"
+      ],
+      "difficulty": "hard",
+      "score": 0.939
+    },
+    {
+      "uid": "easy_medium_hard-synllm_28-22",
+      "source_task_id": "synllm_28",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "lists"
+      ],
+      "difficulty": "hard",
+      "score": 0.942
+    },
+    {
+      "uid": "easy_medium_hard-synllm_16-24",
+      "source_task_id": "synllm_16",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "strings"
+      ],
+      "difficulty": "hard",
+      "score": 0.947
+    },
+    {
+      "uid": "easy_medium_hard-synllm_11-26",
+      "source_task_id": "synllm_11",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "loops",
+        "strings"
+      ],
+      "difficulty": "hard",
+      "score": 1.05
+    },
+    {
+      "uid": "easy_medium_hard-synllm_22-27",
+      "source_task_id": "synllm_22",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "lists",
+        "loops"
+      ],
+      "difficulty": "hard",
+      "score": 1.052
+    },
+    {
+      "uid": "easy_medium_hard-synllm_10-30",
+      "source_task_id": "synllm_10",
+      "strategy": "easy_medium_hard",
+      "stage": "hard",
+      "taxonomy": [
+        "bitwise",
+        "io",
+        "loops",
+        "search",
+        "strings"
+      ],
+      "difficulty": "hard",
+      "score": 1.128
+    }
+  ]
+}

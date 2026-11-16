@@ -1,0 +1,2 @@
+# Danh sách thư viện nằm ở thư mục gốc repo
+-r ../requirements.txt
